@@ -12,7 +12,7 @@
         "postgresql",
         "sqlserver"
     ],
-    "homepage": "https://github.com/risetechapps/code-generate-for-laravel",
+    "homepage": "https://github.com/risetechapps/code-generate",
     "license": "MIT",
     "type": "library",
     "authors": [
