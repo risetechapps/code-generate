@@ -1,10 +1,16 @@
 {
-    "name": "risetechapps/code-generate-for-laravel",
-    "description": "",
+    "name": "risetechapps/code-generate",
+    "description": "Generate sequential codes for Laravel Eloquent models with support for prefixes, reset patterns, and multiple database drivers",
     "keywords": [
         "risetechapps",
         "Rise Tech",
-        "code-generate"
+        "code-generate",
+        "sequential-code",
+        "laravel",
+        "eloquent",
+        "mysql",
+        "postgresql",
+        "sqlserver"
     ],
     "homepage": "https://github.com/risetechapps/code-generate-for-laravel",
     "license": "MIT",
@@ -54,5 +60,5 @@
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
-    "version": "1.0.0"
+    "version": "2.0.0"
 }
