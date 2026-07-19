@@ -34,7 +34,7 @@ readonly class MysqlDatabase implements DatabaseDriverInterface
             if ($field === $col->column_name) {
                 $fieldLength = 255;
 
-                preg_match("/(?<=\().+?(?=\)/", $col->column_type, $matches);
+                preg_match("/(?<=\().+?(?=\)/", (string) $col->column_type, $matches);
                 if (count($matches)) {
                     $fieldLength = (int) $matches[0];
                 }

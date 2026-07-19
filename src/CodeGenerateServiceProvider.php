@@ -19,13 +19,12 @@ class CodeGenerateServiceProvider extends ServiceProvider
     /**
      * Register the application services.
      */
+    #[\Override]
     public function register(): void
     {
         $this->mergeConfig();
 
-        $this->app->singleton(CodeGenerate::class, function () {
-            return new CodeGenerate();
-        });
+        $this->app->singleton(CodeGenerate::class, fn() => new CodeGenerate());
 
         $this->app->alias(CodeGenerate::class, 'code-generate');
     }

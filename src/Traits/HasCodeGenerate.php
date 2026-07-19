@@ -63,7 +63,7 @@ trait HasCodeGenerate
         // Suporte a múltiplas configurações
         if (method_exists($model, 'codeGenerateConfigs')) {
             $configArrays = $model->codeGenerateConfigs();
-            return array_map(fn(array $config) => CodeConfig::fromArray($config), $configArrays);
+            return array_map(CodeConfig::fromArray(...), $configArrays);
         }
 
         // Configuração única via método
@@ -77,7 +77,7 @@ trait HasCodeGenerate
             if (is_array($configArray)) {
                 // Verifica se é uma lista de configurações ou uma única configuração
                 if (isset($configArray[0]) && is_array($configArray[0])) {
-                    return array_map(fn(array $config) => CodeConfig::fromArray($config), $configArray);
+                    return array_map(CodeConfig::fromArray(...), $configArray);
                 }
                 return [CodeConfig::fromArray($configArray)];
             }
